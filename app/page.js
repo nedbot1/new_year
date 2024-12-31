@@ -122,10 +122,10 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
+    <div className="sm: p-10">
       <canvas id="canvas" className="absolute inset-0"></canvas>
       <div className="heading flex flex-col items-center justify-center bg-slate-500/55 rounded-3xl p-10 text-center">
-        <h1>HAPPY NEW YEAR!!!</h1>
+        <h1 className="font-serif">HAPPY NEW YEAR!!!</h1>
         <span>{currentYear}</span>
       </div>
     </div>

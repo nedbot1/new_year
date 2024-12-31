@@ -1,9 +1,12 @@
 "use client"
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [currentYear, setCurrentYear] = useState("");
   useEffect(() => {
+     const year = new Date().getFullYear() + 1;
+     setCurrentYear(year);
     const canvas = document.getElementById("canvas");
     const context = canvas.getContext("2d");
 
@@ -123,7 +126,7 @@ export default function Home() {
       <canvas id="canvas" className="absolute inset-0"></canvas>
       <div className="heading flex flex-col items-center justify-center bg-slate-500/55 rounded-3xl p-10 text-center">
         <h1>HAPPY NEW YEAR!!!</h1>
-        <span>2025</span>
+        <span>{currentYear}</span>
       </div>
     </div>
   );
